@@ -47,12 +47,16 @@
 	<![endif]-->
 </head>
 
-<body class="ng-cloak background">
-	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top"></header>
+<body class="ng-cloak">
+	<header data-ng-include="'/modules/core/views/header.client.view.html'" class=class="navbar navbar-custom navbar-fixed-top"></header>
 	<section class="content">
 		{% block content %}{% endblock %}
 	</section>
-
+	<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+  </footer>
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
 		var user = {{ user | json | safe }};

@@ -11,12 +11,14 @@ module.exports = {
 			js: [
 				// 'public/lib/jquery/dist/jquery.min.js',
 				'public/lib/angular/angular.js',
-				'public/lib/angular-resource/angular-resource.js',
-				'public/lib/angular-animate/angular-animate.js',
-				'public/lib/angular-ui-router/release/angular-ui-router.js',
-				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/angular-file-upload/angular-file-upload.js',
+        'public/lib/angular-resource/angular-resource.js',
+        'public/lib/angular-animate/angular-animate.js',
+        'public/lib/angular-messages/angular-messages.js',
+        'public/lib/angular-ui-router/release/angular-ui-router.js',
+        'public/lib/angular-ui-utils/ui-utils.js',
+        'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+        'public/lib/angular-file-upload/angular-file-upload.js',
+        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
 				// 'public/lib/perfect-scrollbar/min/perfect-scrollbar.min.js',
 				// 'public/lib/perfect-scrollbar/min/perfect-scrollbar.with-mousewheel.min.js',
 				// 'public/lib/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js'
@@ -41,12 +43,14 @@ module.exports = {
 		views: ['modules/*/client/views/**/*.html']
 	},
 	server: {
-		allJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'modules/*/server/**/*.js'],
-		models: 'modules/*/server/models/**/*.js',
-		routes: ['modules/*[!core]/server/routes/**/*.js', 'modules/core/server/routes/**/*.js'],
-		sockets: 'modules/*/server/sockets/**/*.js',
-		config: 'modules/*/server/config/*.js',
-		policies: 'modules/*/server/policies/*.js',
-		views: 'modules/*/server/views/*.html'
+		gruntConfig: 'gruntfile.js',
+    gulpConfig: 'gulpfile.js',
+    allJS: ['server.js', 'config/**/*.js', 'modules/*/server/**/*.js'],
+    models: 'modules/*/server/models/**/*.js',
+    routes: ['modules/!(core)/server/routes/**/*.js', 'modules/core/server/routes/**/*.js'],
+    sockets: 'modules/*/server/sockets/**/*.js',
+    config: 'modules/*/server/config/*.js',
+    policies: 'modules/*/server/policies/*.js',
+    views: 'modules/*/server/views/*.html'
 	}
 };
